@@ -10,6 +10,8 @@
  3. Upload notif.js as "Notification" and script.js as "ENT"
  4. Use Apple Shortcut App to mastered Scriptable script
 
+ > Or get it here : [ISTP.shortcut](https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ISTP.shortcut)
+
 <p align="center">
   <img src="https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ent_scriptable.png"
      alt="Scriptable example"
