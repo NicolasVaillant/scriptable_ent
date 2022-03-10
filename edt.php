@@ -2,23 +2,27 @@
 require __DIR__ . "/vendor/autoload.php";
 
 use Goutte\Client;
+
 include 'login.php';
 
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin:*");
 
 $urlEDT = 'https://ent.istp-france.com/ENT/Eleve/MonPlanning.aspx';
+$iphone = $_GET['iphone'];
+
+
+$mdp = $_GET['TGQPQKJRYU'] ?? $password;
+$user = $_GET['BJ64F8ALSX'] ?? $username;
 
 $client = new Client();
 $crawler = $client->request('GET', $urlEDT);
 
 $form = $crawler->selectButton('LoginButton')->form();
 $crawler = $client->submit($form, array(
-    'UserName' => $username,
-    'Password' => $password
+    'UserName' => $user,
+    'Password' => $mdp
 ));
-
-$iphone = $_GET['iphone'];
 
 $crawler->filter('script')->each(function ($node) use ($iphone) {
 
@@ -43,9 +47,13 @@ $crawler->filter('script')->each(function ($node) use ($iphone) {
                 $o = str_replace("\\", "", $j);
                 $t = str_replace("[", "", $o);
 
-                $label = explode('","barColor', $t);
-                $title_all = explode('"text":"', $label[0])[1];
+                if (str_contains($t, 'webkit-gradient')) {
+                    $label = explode('","start"', $t);
+                } else {
+                    $label = explode('","barColor', $t);
+                }
 
+                $title_all = explode('"text":"', $label[0])[1];
 
                 $teacher = explode('M.', $title_all)[1];
                 $title = explode('M.', $title_all)[0];
@@ -57,11 +65,22 @@ $crawler->filter('script')->each(function ($node) use ($iphone) {
 
                 $place = preg_match('ET[0-9]|[0-9]-[0-9]{2} [A-Z]|[0-9]-[0-9]{2}[A-Z]|[A-Z]{2}[0-9]', $title, $matches);
 
-                $start_int = explode('"start":', $label[1])[1];
-                $start = explode(',"id"', $start_int)[0];
+                if (str_contains($t, 'webkit-gradient')) {
+                    $start_a = explode('"end":', $label[1])[0];
+                    $start = substr($start_a, 1, -1);
 
-                $end_int = explode('"end":', $label[1])[1];
-                $end = explode('},', $end_int)[0];
+                    $end_int = explode('"end":', $label[1])[1];
+                    $end = explode(',"barColor"', $end_int)[0];
+
+                } else {
+                    $start_int = explode('"start":', $label[1])[1];
+                    $start = explode(',"id"', $start_int)[0];
+
+                    $end_int = explode('"end":', $label[1])[1];
+                    $end = explode('},', $end_int)[0];
+                }
+
+
                 $array = array(
                     "title" => $title,
                     "loc" => $matches,
