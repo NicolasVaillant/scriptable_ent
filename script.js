@@ -44,7 +44,7 @@ for(let i = 0 ; i < 15 ; i++){
                         heure_s = (res[i].start.split("T")[1]).replace(/['"]+/g, '')
 
                         if(heure < heure_s){
-                                log(res[i].title)
+                                return res[i].title
                         }else{
                                 return nextDay()
                         }
@@ -62,7 +62,7 @@ function nextDay(){
                 date_s = (res[i].start.split("T")[0]).replace(/['"]+/g, '')
 
                 if(date_n === date_s){
-                        log("(Demain) " + res[i].title)
+                        return ("(Demain) " + res[i].title)
                 }
         }
 }
