@@ -19,9 +19,6 @@ $crawler = $client->submit($form, array(
 ));
 
 $iphone = $_GET['iphone'];
-//echo "iphone :" . $iphone . "\n";
-
-//echo "Start scraping..."."\n";
 
 $crawler->filter('script')->each(function ($node) use ($iphone) {
 
@@ -80,8 +77,6 @@ $crawler->filter('script')->each(function ($node) use ($iphone) {
             $size = array("taille" => sizeof($stack));
             array_push($red, $stack);
             array_push($red, $size);
-//            echo json_encode($red);
-//            print_r($stack);
 
             if ($iphone == true) {
                 echo json_encode($stack);
