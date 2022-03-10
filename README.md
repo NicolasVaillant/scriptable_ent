@@ -5,12 +5,12 @@
 
 ## Instructions 
 
- 1. Download [Scriptable app](https://scriptable.app)
- 2. Add your username and password in login.php
+ 1. Download [Scriptable app](https://scriptable.app) on your IPhone 📱
+ 2. Add your username and password in login.php ⚙️
  3. Upload notif.js as "Notification" and script.js as "ENT"
- 4. Use Apple Shortcut App to mastered Scriptable script
+ 4. Use Apple Shortcut App to mastered Scriptable script 
 
- > Or get it here : [ISTP.shortcut](https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ISTP.shortcut)
+ > Or get it here : [ISTP.shortcut](https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ISTP.shortcut) ✨
 
 <p align="center">
   <img src="https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ent_scriptable.png"
@@ -18,7 +18,7 @@
      style="height : 50vh; width : auto; margin : auto" />
 </p>
      
-5. Use Apple Shortcut App to create automation during the week
+5. Use Apple Shortcut App to create automation during the week 🔥
 
 <p align="center">
   <img src="https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/automation.png"
@@ -27,7 +27,9 @@
 </p>
 
 
- ## Result 
+ ## Result ✅
+ 
+Enjoy your first notification of the next event in your schedule
  
  <p align="center">
   <img src="https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/notif_example.png"
