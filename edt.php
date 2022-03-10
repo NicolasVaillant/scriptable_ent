@@ -2,6 +2,7 @@
 require __DIR__ . "/vendor/autoload.php";
 
 use Goutte\Client;
+include 'login.php';
 
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin:*");
@@ -13,11 +14,14 @@ $crawler = $client->request('GET', $urlEDT);
 
 $form = $crawler->selectButton('LoginButton')->form();
 $crawler = $client->submit($form, array(
-    'UserName' => '',
-    'Password' => ''
+    'UserName' => $username,
+    'Password' => $password
 ));
 
 $iphone = $_GET['iphone'];
+//echo "iphone :" . $iphone . "\n";
+
+//echo "Start scraping..."."\n";
 
 $crawler->filter('script')->each(function ($node) use ($iphone) {
 
@@ -76,6 +80,8 @@ $crawler->filter('script')->each(function ($node) use ($iphone) {
             $size = array("taille" => sizeof($stack));
             array_push($red, $stack);
             array_push($red, $size);
+//            echo json_encode($red);
+//            print_r($stack);
 
             if ($iphone == true) {
                 echo json_encode($stack);
