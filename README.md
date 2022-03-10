@@ -6,7 +6,7 @@
 ## Instructions 
 
  1. Download [Scriptable app](https://scriptable.app) on your IPhone 📱
- 2. Add your username and password in login.php ⚙️
+ 2. Add your username and password in script.js ⚙️
  3. Upload notif.js as "Notification" and script.js as "ENT"
  4. Use Apple Shortcut App to mastered Scriptable script 
 
