@@ -6,8 +6,9 @@
 ## Instructions 
 
  1. Download [Scriptable app](https://scriptable.app)
- 2. Upload notif.js as "Notification" and script.js as "ENT"
- 3. Use Apple Shortcut App to mastered Scriptable script
+ 2. Add your username and password in login.php
+ 3. Upload notif.js as "Notification" and script.js as "ENT"
+ 4. Use Apple Shortcut App to mastered Scriptable script
 
 <p align="center">
   <img src="https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ent_scriptable.png"
@@ -15,7 +16,7 @@
      style="height : 50vh; width : auto; margin : auto" />
 </p>
      
-4. Use Apple Shortcut App to create automation during the week
+5. Use Apple Shortcut App to create automation during the week
 
 <p align="center">
   <img src="https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/automation.png"
