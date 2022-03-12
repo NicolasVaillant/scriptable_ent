@@ -3,14 +3,16 @@
 > From Goutte (web scraper), php file provide you an json_encode result used in Scriptable app (IPhone App)
 > [Scriptable link](https://scriptable.app)
 
+⚠️ Work **only** on Apple product (due to Scriptable app)
+
 ## Instructions 
 
  1. Download [Scriptable app](https://scriptable.app) on your IPhone 📱
- 2. Add your username and password in script.js ⚙️
- 3. Upload notif.js as "Notification" and script.js as "ENT"
+ 2. Add your ENT username and password in script.js ⚙️
+ 3. Upload notif.js as "Notification" and script.js as "ENT" in Scriptable
  4. Use Apple Shortcut App to mastered Scriptable script 
 
- > Or get it here : [ISTP.shortcut](https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ISTP.shortcut) ✨
+ > Get shortcut here : [ISTP.shortcut](https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ISTP.shortcut) ✨
 
 <p align="center">
   <img src="https://stuff.nicolasvaillant.net/local/prive/istp/ressources/img/ent_scriptable.png"
