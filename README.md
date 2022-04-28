@@ -1,11 +1,24 @@
-# scriptable_ent
+## UDPATE
 
-> From Goutte (web scraper), php file provide you an json_encode result used in Scriptable app (IPhone App)
-> [Scriptable link](https://scriptable.app)
+This update allow user to set datas to his [Google Calendar](https://developers.google.com/calendar/api)
+
+Use folder /scriptable for easy usage 
+
+
+---
+
+From Goutte (web scraper), php file provide you an json_encode result used in [Scriptable app](https://scriptable.app) (IPhone App)
 
 ⚠️ Work **only** on Apple product (due to Scriptable app)
 
-## Instructions 
+
+## Google Calendar Instructions 
+
+1. Go to [Developers Google Calendar](https://developers.google.com/calendar/api)
+2. Create your API_KEY and ID clients OAuth 2.0
+3. Set the calendar ID you want to use (use listCalendar function to get all your calendars)
+
+## Scriptable Instructions 
 
  1. Download [Scriptable app](https://scriptable.app) on your IPhone 📱
  2. Add your ENT username and password in script.js ⚙️
