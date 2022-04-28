@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="ressources/css/style.css">
+    <script src="ressources/js/script.js" defer></script>
+    <script src="ressources/js/calendar.js" defer></script>
+    
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+    
+    
+    <title>Edt</title>
+</head>
+<body>
+<button id="authorize_button" style="display: none;">
+    <i class="fab fa-google"></i>
+    Authorize
+</button>
+<button id="signout_button" style="display: none;">
+    <i class="fab fa-google"></i>
+    Sign Out
+</button>
+    <div class="container"></div>
+</body>
+</html>
